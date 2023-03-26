@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+:root{
+    --mainColor: #35416d;
+    --mainColorLight: #6b7bbd;
+    --secondaryColor: #8caddf; 
+    /* #0D6EFD */
+    --textColor: #eee;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+}
+
+nav a {
+    margin: 0 2rem;
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: var(--secondaryColor);
+}
+
+header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    visibility: hidden;
+    opacity: 0; 
+    font-size: 1.8rem;
+}
+
+/* and (max-width: 1024px) */
+@media only screen {                /*the following styles apply when screen is 1024px or less*/
+    header .nav-btn{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: var(--mainColor);
+        transition: 1s;                    /* makes the transition smoother */
+        transform: translate(-100%);       /*When nav is close is set to not visible on the rest of the page*/
+        /* ex value = -250vh but now leaves the screen completely */
+    }
+
+    header .responsive_nav {
+        transform: none;    /*it'll cancel the transformation and bring it back to the screen*/
+    }
+    
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    nav a{
+        font-size: 1.5rem;
+    }
+}
+
+
