@@ -29,7 +29,7 @@ async function handleSubmit(e){
 
 return (
     <>
-    <Card>
+    <Card style={{position: "unset"}}>
         <Card.Body>
             <h2 className="text-center mb-4">Login</h2>
             {error && <Alert variant = "danger">{error}</Alert>}

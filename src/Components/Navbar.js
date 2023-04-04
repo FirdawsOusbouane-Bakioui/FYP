@@ -33,7 +33,7 @@ function Navbar() {
             <header>
                 <h3>Whats the Plan?</h3>
                 {error && <Alert variant="danger">{error}</Alert>}
-                <nav ref={navRef}>          {/*added onClick to all elements so navbad closes once clicked*/}
+                <nav  ref={navRef}>          {/*added onClick to all elements so navbad closes once clicked*/}
                     <Link to="/" onClick={showNavbar}>Dashboard</Link>
                     <Link to="/plans" onClick={showNavbar}>Plans</Link>
                     <Link to="/calendar" onClick={showNavbar}>Calendar</Link>

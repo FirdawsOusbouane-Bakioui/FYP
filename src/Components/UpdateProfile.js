@@ -33,7 +33,7 @@ function handleSubmit(e){
     }
     
     Promise.all(promises).then(() => {          //so if all the promises are successful the .then will be executed
-        navigate('/')
+        navigate('/profile')
     }).catch(() => {
         setError('Failed to update account')
     }).finally(() => {
@@ -72,7 +72,7 @@ return (
         </Card.Body>
     </Card>
     <div className="w-100 text-center mt-2">
-        <Link to="/">Cancel</Link>
+        <Link to="/profile">Cancel</Link>
     </div>
 
     </>

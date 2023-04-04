@@ -10,10 +10,14 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile";
 //this is a new change
 import Plans from "./Plans"
-import Calendar from "./Calendar"
+//import {MyCalendar as Calendar} from "./Calendar"
+import DemoApp from "./DemoApp"
+//import { App as Calendar } from "@jc-calendar/src/components/App";
 import Profile from "./Profile"
 import Dashboard from "./Dashboard";
-import NewPlan from "./NewPlan"
+//import NewPlan from "./NewPlan"
+import FormDB from "./FormDB"
+//import {ReminderContainer as NewPlan} from "@jc-calendar";
 
 //import Navbar from "./Components/Dashboard";
 
@@ -30,12 +34,11 @@ function App() {
         <div>
           <Router>
             <AuthProvider>
-              <Navbar/>
+              <Navbar style={{position: "relative"}}/>
             <Routes>
                 <Route path ='/'
                 element ={
                   <PrivateRoute>
-                    
                     <Dashboard/>
                   </PrivateRoute>
                 }>
@@ -50,7 +53,8 @@ function App() {
                   <Route path ='/calendar'
                   element ={
                     <PrivateRoute>
-                      <Calendar/>
+                      {/* <Calendar/> */}
+                      <DemoApp />
                     </PrivateRoute>
                   }></Route>
 
@@ -71,7 +75,8 @@ function App() {
                 <Route path ='/new-plan'
                 element ={
                   <PrivateRoute>
-                    <NewPlan/>
+                    {/* <NewPlan/> */}
+                    <FormDB/>
                   </PrivateRoute>
                 }></Route>
 

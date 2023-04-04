@@ -5,6 +5,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Titillium Web', sans-serif;
+    text-decoration: none !important;
+    text-transform: capitalize !important;
+    /* color: #020000 !important; */
 }
 
 :root{
@@ -13,6 +16,7 @@
     --secondaryColor: #8caddf; 
     /* #0D6EFD */
     --textColor: #eee;
+    
 }
 
 header {
@@ -23,6 +27,7 @@ header {
     padding: 0 2rem;
     background-color: var(--mainColor);
     color: var(--textColor);
+    /* text-transform: capitalize; */
 }
 
 nav a {
@@ -55,6 +60,7 @@ header .nav-btn {
     }
 
     header nav{
+        z-index: 2;       /*FIXED LAYERINGG*/
         position: fixed;
         top: 0;
         left: 0;
@@ -87,3 +93,6 @@ header .nav-btn {
 }
 
 
+/* demo-app-main{
+    text-transform: capitalize;
+} */
